@@ -1,0 +1,29 @@
+{% extends 'dummy.html' %}
+<head>
+    {% block title %} 
+    <title>register</title>
+    {% endblock %} 
+</head>
+<body>
+    {% block body_block %} 
+
+    <center>
+        <h1 style="background-color: cornflowerblue;">registeration Form</h1>
+
+        <form method="POST" enctype="multipart/form-data" style="background-color: cyan;">
+            
+            {% csrf_token %} 
+
+
+
+             {{ufo.as_p}}
+             {{pfo.as_p}}
+
+
+
+            <input type="submit" value="register" style="background-color: darkred;">
+        </form>
+    </center>
+    {% endblock %}
+</body>
+</html>
